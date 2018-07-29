@@ -1,6 +1,5 @@
 package io.gitlab.arturbosch.lazy.shell.modules.gradle
 
-import io.gitlab.arturbosch.ksh.api.BuiltinCommand
 import io.gitlab.arturbosch.ksh.api.ShellClass
 import io.gitlab.arturbosch.ksh.api.ShellMethod
 import io.gitlab.arturbosch.ksh.api.ShellOption
@@ -13,8 +12,9 @@ import java.nio.file.StandardOpenOption
 /**
  * @author Artur Bosch
  */
-@BuiltinCommand
 class Gradle : ShellClass {
+
+	override val help: String = "Provides templating commands specific for gradle."
 
 	@ShellMethod
 	fun module(
